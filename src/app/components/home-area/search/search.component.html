@@ -1,0 +1,8 @@
+<div class="box">
+
+<label [title]="tooltip" >Enter text to search:</label>
+<input type="search"[(ngModel)]="textToSearch"/>
+<button (click)="searchWebsite($event)">🔍</button>
+<span>Searching for {{textToSearch}}</span>
+
+</div>

@@ -1,0 +1,19 @@
+<div>
+
+    <app-search></app-search>
+    <app-clock></app-clock>
+    <app-slogan slogan="Exotic Products!"></app-slogan>
+    <app-slogan slogan="Healthy & Cheap!"></app-slogan>
+    <app-tip>
+        Eat a <strong>healthy</strong> breakfast
+    </app-tip>
+    <app-tip>
+        <span class="subject"> Weight Reduction</span>
+        Avoid eating after <strong>9:00 PM</strong>
+    </app-tip>
+    <app-survey (report)="display($event)">
+        <p class="subject">
+            How is our service quality 
+        </p>
+    </app-survey>
+</div>

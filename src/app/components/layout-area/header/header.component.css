@@ -1,0 +1,8 @@
+div{
+    height: 100%;
+    /*vertical aling*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
