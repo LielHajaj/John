@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from '../home-area/home/home.component';
 import { HomeModule } from '../home-area/home.module';
 import { AboutModule } from '../about-area/about.module';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 
 
@@ -19,6 +20,7 @@ import { AboutModule } from '../about-area/about.module';
   ],
   imports: [
     CommonModule,
+    AppRoutingModule,
     HomeModule,
     AboutModule
   ]
