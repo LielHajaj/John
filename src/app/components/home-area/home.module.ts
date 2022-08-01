@@ -7,6 +7,12 @@ import { ClockComponent } from './clock/clock.component';
 import { SloganComponent } from './slogan/slogan.component';
 import { TipComponent } from './tip/tip.component';
 import { SurveyComponent } from './survey/survey.component';
+import { LocationComponent } from './location/location.component';
+import { GiftCardComponent } from './gift-card/gift-card.component';
+import { DiscountComponent } from './discount/discount.component';
+import { SalesComponent } from './sales/sales.component';
+import { PipesModule } from 'src/app/pipes/pipes.module';
+import { DirectivesModule } from 'src/app/directives/directives.module';
 
 
 
@@ -17,11 +23,17 @@ import { SurveyComponent } from './survey/survey.component';
     ClockComponent,
     SloganComponent,
     TipComponent,
-    SurveyComponent
+    SurveyComponent,
+    LocationComponent,
+    GiftCardComponent,
+    DiscountComponent,
+    SalesComponent
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    PipesModule,
+    DirectivesModule
   ],
   exports:[
     HomeComponent

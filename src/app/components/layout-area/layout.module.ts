@@ -6,6 +6,7 @@ import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from '../home-area/home/home.component';
 import { HomeModule } from '../home-area/home.module';
+import { AboutModule } from '../about-area/about.module';
 
 
 
@@ -18,7 +19,8 @@ import { HomeModule } from '../home-area/home.module';
   ],
   imports: [
     CommonModule,
-    HomeModule
+    HomeModule,
+    AboutModule
   ]
 })
 export class LayoutModule { }
