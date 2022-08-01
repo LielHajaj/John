@@ -13,30 +13,37 @@ import { DiscountComponent } from './discount/discount.component';
 import { SalesComponent } from './sales/sales.component';
 import { PipesModule } from 'src/app/pipes/pipes.module';
 import { DirectivesModule } from 'src/app/directives/directives.module';
+import { RandomSaleComponent } from './random-sale/random-sale.component';
+import { provideRoutes } from '@angular/router';
+import { ColorService } from 'src/app/services/colors/colors.service';
 
 
 
 @NgModule({
-  declarations: [
-    HomeComponent,
-    SearchComponent,
-    ClockComponent,
-    SloganComponent,
-    TipComponent,
-    SurveyComponent,
-    LocationComponent,
-    GiftCardComponent,
-    DiscountComponent,
-    SalesComponent
-  ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    PipesModule,
-    DirectivesModule
-  ],
-  exports:[
-    HomeComponent
-  ]
+    declarations: [
+        HomeComponent,
+        SearchComponent,
+        ClockComponent,
+        SloganComponent,
+        TipComponent,
+        SurveyComponent,
+        LocationComponent,
+        GiftCardComponent,
+        DiscountComponent,
+        SalesComponent,
+        RandomSaleComponent
+    ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        PipesModule,
+        DirectivesModule
+    ],
+    exports: [
+        HomeComponent
+    ],
+    providers: [
+        ColorService
+    ]
 })
 export class HomeModule { }

@@ -8,6 +8,7 @@ import { HomeComponent } from '../home-area/home/home.component';
 import { HomeModule } from '../home-area/home.module';
 import { AboutModule } from '../about-area/about.module';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
@@ -16,7 +17,8 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
     LayoutComponent,
     HeaderComponent,
     MenuComponent,
-    FooterComponent
+    FooterComponent,
+    PageNotFoundComponent
   ],
   imports: [
     CommonModule,
