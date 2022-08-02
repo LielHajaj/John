@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ProductModel } from 'src/app/models/product.model';
+import { ProductsService } from 'src/app/services/products/products.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
     selector: 'app-product-details',
@@ -8,13 +11,24 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductDetailsComponent implements OnInit {
 
-    constructor(private activatedRoute: ActivatedRoute) { }
+    public product: ProductModel;
+    public imageSource: string;
+    constructor(private activatedRoute: ActivatedRoute, private productsService: ProductsService) { }
 
-    ngOnInit(): void {
+    async ngOnInit() {
+        
 
-        const id =  +this.activatedRoute.snapshot.params["productId"];
-        console.log(id);
-        console.log(typeof id);
+        try {
+            const id = +this.activatedRoute.snapshot.params["productId"];
+            this.product = await this.productsService.getOneProduct(id);
+            this.imageSource = environment.productsUrl +"images/" + this.product.imageName;
+            
+        }
+        catch (err: any) {
+            alert(err.message);
+        }
+       
+
+
     }
-
 }

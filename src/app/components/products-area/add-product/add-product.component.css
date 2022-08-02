@@ -1,0 +1,18 @@
+form{
+    text-align: left;
+    width: 250px;
+
+}
+h2{
+    text-align: center;
+}
+input,button{
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+span{
+    color: red;
+    position: absolute;
+    margin-left: 20px;
+}

@@ -1,1 +1,8 @@
-<p>product-details works!</p>
+<div *ngIf="product">
+
+    <h3> {{product.name}} <br> </h3>
+    <h3>Price: {{product.price | currency}} 🤑<br></h3>
+    <h3> Stock: {{product.stock}} <br></h3>
+    <img [src]="imageSource">
+
+</div>
