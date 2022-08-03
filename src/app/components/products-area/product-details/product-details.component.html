@@ -4,5 +4,11 @@
     <h3>Price: {{product.price | currency}} 🤑<br></h3>
     <h3> Stock: {{product.stock}} <br></h3>
     <img [src]="imageSource">
+    <br>
+    <a routerLink="/products">Back</a>
+    <span> | </span>
+    <a routerLink="/products/edit/{{product.id}}">Edit</a>
+    <span> | </span>
+    <a href="javascript:void(0)" (click)="deleteProduct()">Delete</a>
 
 </div>

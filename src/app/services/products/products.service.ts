@@ -28,5 +28,16 @@ export class ProductsService {
 
         const addedProduct = await firstValueFrom(this.http.post<ProductModel>(environment.productsUrl, formData));
     }
+    public async updateProduct(product: ProductModel): Promise<void>{
+        const formData =new FormData();
+        formData.append("name", product.name);
+        formData.append("price", product.price.toString());
+        formData.append("stock", product.stock.toString());
+        formData.append("image", product.image);
 
+        const updatedProduct = await firstValueFrom(this.http.put<ProductModel>(environment.productsUrl + product.id, formData));
+    }
+    public async deleteProduct(id: number): Promise<void>{
+        await firstValueFrom(this.http.delete(environment.productsUrl + id));
+    }
 }

@@ -1,0 +1,23 @@
+<div class="box" *ngIf="product" >
+    <form  [formGroup]="productForm" (ngSubmit)="send()">
+        <h2>Edit Product</h2>
+        <label>Name:</label>
+        <input type="text"  [formControl]="nameControl">
+        
+        
+
+        <label>Price:</label>
+        <input type="number" [formControl]="priceControl">
+
+        <label>Stock:</label >
+        <input type="number" [formControl]="stockControl">
+
+        <label>Image:</label>
+        <input type="file" accept="image/*" #imageControl>
+
+        <button>Update</button>
+
+
+
+    </form>
+</div>

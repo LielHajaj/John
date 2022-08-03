@@ -19,8 +19,7 @@
             #priceControl="ngModel">
         <span *ngIf="priceControl.errors?.['required'] && priceControl.touched">Missing price</span>
         <span *ngIf="priceControl.errors?.['min'] && priceControl.touched">price cant be less then 0!</span>
-        <span *ngIf="priceControl.errors?.['max'] && priceControl.touched">Price to large (more then 1,000
-            dollars)</span>
+        <span *ngIf="priceControl.errors?.['max'] && priceControl.touched">Price to large (more then 1,000$)</span>
 
         <label>Stock:</label>
         <input type="number" name="stock" [(ngModel)]="product.stock" required min="0" max="10000"
