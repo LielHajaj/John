@@ -6,7 +6,8 @@ import { LayoutComponent } from './components/layout-area/layout/layout.componen
 import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
-    declarations: [],
+    declarations: [
+  ],
     imports: [
         BrowserModule,
         AppRoutingModule,

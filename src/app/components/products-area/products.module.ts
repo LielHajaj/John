@@ -7,6 +7,8 @@ import { RouterModule } from '@angular/router';
 import { AddProductComponent } from './add-product/add-product.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditProductComponent } from './edit-product/edit-product.component';
+import { SharedModule } from '../shared-area/shared.module';
+import { TotalProductsComponent } from './total-products/total-products.component';
 
 
 
@@ -16,18 +18,18 @@ import { EditProductComponent } from './edit-product/edit-product.component';
     ProductDetailsComponent,
     ProductCardComponent,
     AddProductComponent,
-    EditProductComponent
+    EditProductComponent,
+    TotalProductsComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
-//   exports:[
-//     ProductListComponent,
-//     ProductDetailsComponent,
-//     ProductCardComponent
-//   ]
+  exports:[
+    TotalProductsComponent
+  ]
 })
 export class ProductsModule { }

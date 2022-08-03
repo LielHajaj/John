@@ -1,5 +1,6 @@
 <div>
     <a routerLink="/products/new">➕</a>
+    <app-loading *ngIf="!products"></app-loading>
     <!-- <span *ngFor="let p of products">{{p.name}} | </span> -->
     <app-product-card *ngFor="let p of products" [product]="p"></app-product-card>
 
