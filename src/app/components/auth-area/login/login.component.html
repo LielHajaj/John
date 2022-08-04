@@ -1,0 +1,14 @@
+<div class="box" >
+
+    <form (ngSubmit)="send()">
+    
+        <h2>Login:</h2>
+
+        <label>Username:</label>
+        <input type="text" name="username" [(ngModel)]="credentials.username">
+        <label>password</label>
+        <input type="password" name="password" [(ngModel)]="credentials.password">
+        <button>Register</button>
+    </form>
+    
+    </div>

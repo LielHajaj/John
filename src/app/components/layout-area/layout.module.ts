@@ -10,6 +10,7 @@ import { AboutModule } from '../about-area/about.module';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductsModule } from '../products-area/products.module';
+import { AuthModule } from '../auth-area/auth.module';
 
 
 
@@ -26,7 +27,8 @@ import { ProductsModule } from '../products-area/products.module';
     AppRoutingModule,
     HomeModule,
     AboutModule,
-    ProductsModule
+    ProductsModule,
+    AuthModule
   ]
 })
 export class LayoutModule { }
